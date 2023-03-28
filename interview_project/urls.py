@@ -20,4 +20,6 @@ from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index), #首頁
+    path('menu/',views.menu), #菜單(含新品)
+    path('test/',views.test),
 ]

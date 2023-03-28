@@ -12,3 +12,11 @@ def index(request):
         product = ProductModel.objects.get(id = i)
         productlist.append(product)
     return render(request, 'index.html', locals())
+
+def menu(request):
+    # return HttpResponse("hello world")
+
+    return render(request, 'menu.html', locals())
+
+def test(request):
+    return render(request, 'test.html', locals())
