@@ -15,7 +15,11 @@ def index(request):
 
 def menu(request):
     # return HttpResponse("hello world")
-
+    products = ProductModel.objects.all()
+    productlist = []
+    for i in range(1, 9):
+        product = ProductModel.objects.get(id = i)
+        productlist.append(product)
     return render(request, 'menu.html', locals())
 
 def test(request):
