@@ -10,7 +10,13 @@
   img{
     height: 700px;
     width: 100%;
-    
+  }
+  /* span 設定背景跟hover(滑動)變色 */
+  span{
+    background-color:black;
+  }
+  span:hover{
+    background-color: red;
   }
 </style>
 
@@ -18,12 +24,6 @@
 {% block content %}
 <!-- 輪播照片區塊 -->
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators"><!--輪播指標-->
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-  </div>
   <div class="carousel-inner">
     {% for product in productlist %}
     <div class="carousel-item {% if product.pimage == 'americano.png' %} active {% endif %}" data-bs-interval="3000">
