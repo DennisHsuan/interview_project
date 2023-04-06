@@ -21,5 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index), #首頁
     path('menu/',views.menu), #菜單(含新品)
-    path('test/',views.test),
+    path('userlogin/',views.userlogin), #登入會員
+    path('useradd/',views.useradd), #註冊會員
+    path('userlogout/', views.userlogout), #會員登出
 ]

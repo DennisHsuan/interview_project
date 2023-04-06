@@ -8,8 +8,9 @@
     color:white;
   }
   img{
-    height: 700px;
+    height: auto;
     max-width: 100%;
+    /* max-height: auto; */
   }
   /* span 設定背景跟hover(滑動)變色 */
   span{
@@ -26,7 +27,7 @@
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     {% for product in productlist %}
-    <div class="carousel-item {% if product.pimage == 'americano.png' %} active {% endif %}" data-bs-interval="3000">
+    <div class="carousel-item {% if product.pimage == 'A1.png' %} active {% endif %}" data-bs-interval="3000">
       <img src="/static/images/products/{{product.pimage}}" class="d-block w-100" alt="...">
       <!-- product就是views.py裡面跟資料庫要資料後再進來執行的 -->
       <div class="carousel-caption d-none d-md-block">
